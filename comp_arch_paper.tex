@@ -1,0 +1,26 @@
+\documentclass[a4paper,12pt]{article}
+\begin{document}
+
+\author{Cagdas Karatas, Sanket Wagle, Alex Weiner}
+\title{Analysis of Branch Prediction Strategies}
+\maketitle
+
+\section{Branch Prediction}
+Branch predicton has become and important part of modern computer processor design. A branch predictor is hardware or software that attempts to guess if a branch instruction will be taken or not taken in the instruction pipeline. This offers many benefits to pipelined processors. Before branch predictors came into existence, the processor would have to wait for a branch instruction to resolve in the execute stage before the next instruction could be fetched. This time is rendered completely useless. 
+
+The key mechanism of branch prediction is speculative execution. Instead of waiting for a result and fetching the appropriate instruction, one of the branches is speculatively executed. If this is the correct branch then there is no wasted time in the pipeline. If this is the incorrect branch, then the computation must be discarded and the correct instruction will be fetched. The need for a precise branch predictor arises from the large losses of a mispredicted branch. The time wasted on a mispredicted branch is equal to the number of pipeline stages from fetch to execute.
+
+Various prediction strategies exist. There are simple approaches such as, "assume the branch is always taken" and "assume the branch is never taken". These are static as the decision making never changes. Dynamic prediction strategies have also been developed. The family of dynamic strategies change the decision making process as the progra is executed. This is accomplished by using schemes such a global branch history, per-branch history, as well as temporo-local history.
+
+\section{Simplescalar}
+\section{Branch Prediction Strategies}
+\subsection{Single Branch History Bit}
+\subsection{Branch History Counters}
+\subsection{Static Probabilistic Prediction}
+\section{Results}
+\section{Conclusion}
+
+
+
+
+\end{document}
