@@ -12,7 +12,9 @@ The key mechanism of branch prediction is speculative execution. Instead of wait
 
 Various prediction strategies exist. There are simple approaches such as, "assume the branch is always taken" and "assume the branch is never taken". These are static as the decision making never changes. Dynamic prediction strategies have also been developed. The family of dynamic strategies change the decision making process as the progra is executed. This is accomplished by using schemes such a global branch history, per-branch history, as well as temporo-local history.
 
-\section{Simplescalar}
+\section{SimpleScalar}
+%%This needs citation from www.simplescalar.com/overview.html
+SimpleScalar is a piece of software that allows for the simulation of a super-scalar processor. The tool set can be used to build modeling applications for program performance analysis, detailed microarchitectural modeling, as well as hardware-software co-verification. SimpleScalar can be modified to support a wide range of hardware configurations, ranging from a fast functional simulator to a detailed, dynamically scheduled processor. This configuration supports non-blocking caches, speculative execution, as well as state-of-the-art branch prediction.
 \section{Branch Prediction Strategies}
 \subsection{Single Branch History Bit}
 \subsection{Branch History Counters}
