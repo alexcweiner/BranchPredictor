@@ -1,9 +1,14 @@
 /***
 This program generates the sequences used for branch prediction.
-USAGE: "distributions -poisson 10" generates ten samples of a poisson distribution.
-The mean(standard deviation for gaussian) is hardcoded...as of now.
+
+USAGE: "distributions -poisson 10 3.0" generates ten samples of a poisson distribution with a mean of 3.0.
+
+The last argument is the mean value for poisson and exponential distributions. 
+It is the standard deviation for the gaussian distribution.
+MAKE SURE IT IS A DOUBLE!
 ***/
 #include <stdio.h>
+#include <stdlib.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 
@@ -14,7 +19,7 @@ const gsl_rng_type * T;
 gsl_rng * r;
 int i;
 int n = atoi(argv[2]);
-double mu = 3.0;	
+double mu = atof(argv[3]);	
 
 gsl_rng_env_setup();
 
